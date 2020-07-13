@@ -1,0 +1,217 @@
+.header {
+    position: relative;
+    margin: 0 auto;
+    padding: 10px;
+    height: 750px;
+    background-image: url(../../img/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__leftfixed {
+        width: 40px;
+        position: fixed;
+        top: 50%;
+        left: 20px;
+        opacity: 1;
+        z-index: 2;
+        :hover {
+            opacity: 0.5;
+            transition: 0.6s linear;
+        }
+        &-social {
+            margin: 15px 0 0 7px;
+        }
+    }
+    &__navbar {
+        &-logo {
+            display: block;
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            width: 161px;
+            height: 60px;
+            opacity: 1;
+            z-index: 2;
+        }
+        &-btn {
+            position: fixed;
+            display: block;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 30px;
+            width: 150px;
+            max-height: 40px;
+            background-color: $main-color;
+            border-radius: 3px;
+            cursor: pointer;
+            :hover img {
+                transform: translateX(25%);
+            }
+            &-content {
+                margin: 13px 20px 12px 20px;
+                color: $back-color;
+            }
+            img {
+                padding: 0 0 2px 20px;
+                width: 14px;
+            }
+            &-text {
+                color: #E1E6E3;
+                font-family: Josefin Sans;
+                font-weight: 600;
+                font-size: 17px;
+                line-height: 17px;
+            }
+        }
+        &-lang {
+            position: fixed;
+            height: 20px;
+            left: 80%; 
+            top: 44px;
+            font-family: Josefin Sans, sans-serif;
+            font-weight: 600;
+            font-size: 17px;
+            text-transform: uppercase;
+            cursor: pointer;
+            z-index: 2;
+            a:hover {
+                color: $second-color;
+                font-size: 20px;
+            }
+            &-passive {
+                text-decoration: none;
+                color: $main-color;
+                transition: 0.4s linear;
+            }
+            &-active {
+                text-decoration: none;
+                color: $second-color;
+                transition: 0.4s linear;
+            }
+        }
+    }
+    &__content {
+        height: 310px;
+        h1{
+            margin-top: 175px;
+            margin-bottom: 0;
+            font-family: Josefin Sans;
+            font-weight: bold;
+            font-size: 64px;
+            line-height: 80px;
+            text-align: center;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: $main-color;
+        }
+        &-head {
+            display: inline-block;
+            position: absolute;
+            top: 42%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px;
+            height: 100px;
+            border: 5px solid $second-color;
+            font-family: Josefin Sans;
+            font-weight: bold;
+            font-size: 97px;
+            line-height: 122px;
+            text-align: center;
+            align-items: center;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: $second-color;
+        }
+        &-text {
+            position: absolute;
+            top: 57%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 638px;
+            height: 87px;
+            font-family: Roboto;
+            font-weight: normal;
+            font-size: 22px;
+            line-height: 29px;
+            text-align: center;
+            letter-spacing: 10px;
+            color: $back-color;
+        }
+    }
+    div:hover .hamburger-bar:after {
+        transform: rotate(0deg) translate(4px,4px);
+        transition: 0.1s linear;
+    }
+    div:hover .hamburger-bar:before {
+        transform: rotate(0deg) translate(-4px,-4px);
+        transition: 0.1s linear;
+    }
+    .nav-icon {
+        display: block;
+        position: fixed;
+        left: 90%;
+        top: 20px;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        z-index: 1;
+        .hamburger-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .hamburger-bar:before {
+            box-sizing: border-box;
+            content: '';
+            position: absolute;
+            width: 22px;
+            height: 2px;
+            background: $main-color;
+            transform: rotate(0deg) translate(0px,-4px);
+        }
+        .hamburger-bar:after {
+            box-sizing: border-box;
+            content: '';
+            position: absolute;
+            width: 22px;
+            height: 2px;
+            background: $main-color;
+            transform: rotate(0deg) translate(0px,4px);
+        }
+    }
+        :hover .arrow-down {
+            top: 50%;
+        }
+    &__down {
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -20px;
+        width: 80px;
+        height: 80px;
+        background-color: $second-color;
+        cursor: pointer;
+
+        img {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.4s;
+        }
+    }
+}
+
+@media only screen and (max-width: 350px) {   
+    .header {
+        background-image: none;
+        background-color: $main-color; 
+        height: 350px;  
+    } 
+}

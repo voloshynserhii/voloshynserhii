@@ -1,0 +1,91 @@
+.ask {
+    display: block;
+    width: 100%;
+    height: 1000px;
+    background-color: $main-color;
+    &__content {
+        display: flex;
+        position: relative;
+        top: 370px;
+        &-descr {
+            width: 50%;
+            margin: 0 20px 0 70px;
+            color: $back-color;
+            h2 {
+                font-family: Josefin Sans;
+                font-weight: 600;
+                font-size: 50px;
+                line-height: 66px;
+                letter-spacing: 6px;
+                text-transform: uppercase;
+            }
+            &-text {
+                font-family: Josefin Sans;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 32px;
+                letter-spacing: 2px;
+                color: $back-color;
+            }
+            button {
+                width: 177px;
+                height: 36px;
+                margin-left: 50%;
+                margin-top: 50px;
+                background-color: $second-color;
+                border-style: none;
+                font-family: Josefin Sans;
+                font-weight: normal;
+                font-size: 24px;
+                line-height: 32px;
+                letter-spacing: 2px;
+                color: $back-color;
+                border-radius: 2px;
+                cursor: pointer;
+                transition: 0.4s linear;
+                img {
+                    width: 15px;
+                    margin-bottom: 2px;
+                }
+            }
+            button:hover {
+                width: 183px;
+                img {
+                    margin-left: 5px;
+                }
+            }
+        }
+        &-menu {
+            margin-top: 200px;
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 140px;
+            margin-left: 50px;
+            font-family: Roboto;
+            font-weight: 900;
+            line-height: 29px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            &-col {
+                a {
+                    display: block;
+                    text-decoration: none;
+                    max-width: 100px;
+                }
+                a:hover {
+                    font-size: 14px;
+                }
+                &-main {
+                    color: $second-color;
+                    font-size: 13px;
+                }
+                &-second {
+                    color: $back-color; 
+                    font-size: 11px; 
+                    letter-spacing: 3px;
+                }
+            }
+        }
+    }
+}

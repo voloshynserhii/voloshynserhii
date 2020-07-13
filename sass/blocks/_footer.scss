@@ -1,0 +1,26 @@
+.footer {
+    height: 150px;
+    padding: 40px 300px 0px 150px;
+    background-color: $second-color;
+    display: flex;
+    justify-content: space-between;
+    &__logo {
+        width: 160px;
+    }
+    &__text {
+        font-family: Roboto;
+        text-align: center;
+        letter-spacing: 2px;
+        color: $main-color;
+        &-addr {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 32px;   
+        }
+        &-rights {
+            margin-top: 50px;
+            font-weight: 300;
+            font-size: 13px;
+        }
+    }
+}

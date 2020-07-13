@@ -1,0 +1,55 @@
+.works {
+    margin: 100px 20px 0 70px;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    width: 100%;
+    background-color: $back-color;
+    &__head {
+        display: block;
+        width: 50%;
+        font-family: Josefin Sans;
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 106px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: $main-color;
+    }
+    &__btn {
+        display: flex;
+        justify-content: space-between;
+        width: 255px;
+        height: 96px;
+        background-color: $main-color;
+        margin-right: 150px;
+        font-family: Josefin Sans;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 31px;
+        letter-spacing: 9px;
+        text-transform: uppercase;
+        color: $back-color;
+        cursor: pointer;
+        &-txt {
+            display: block;
+            width: 145px;
+            margin: 22px 10px 25px 20px;
+        }
+        img {
+            margin-right: 40px;
+            transition: 0.3s linear;
+        }
+    }
+    &__btn:hover img {
+        margin-right: 20px;
+    }
+}
+.cards {
+    margin-left: 120px;
+    background-color: $back-color;
+    img {
+        width: 450px;
+        margin-right: 100px;
+    }
+}
