@@ -13,10 +13,8 @@
         color: $main-color;
     }
     &__list {
-        // position: absolute;
-        // display: flex;
-        // justify-content: space-between;
         &-blocks {
+            position: relative;
             width: 250px;
             height: 300px;
             margin-right: 32px;
@@ -24,10 +22,44 @@
             border-radius: 5px;
             transform: translateX(-100px);
             &-photo {
+                position: absolute;
+                left: 25%;
                 width: 100px;
                 height: 100px;
                 border-radius: 3px;
+                border: 2px solid $second-color;
                 margin: 10px 0px 10px 10px;
+            }
+            &-text {
+                position: absolute;
+                margin: 0 10px 0 10px;
+                top: 45%;
+                font-family: Josefin Sans;
+                font-weight: 300;
+                font-size: 17px;
+                line-height: 17px;
+                text-align: center;
+            }
+            h3 {
+                position: absolute;
+                bottom: 10%;
+                left: 10px;
+                font-family: Roboto;
+                font-weight: 400;
+                font-size: 17px;
+            }
+            h5 {
+                position: absolute;
+                bottom: 4%;
+                left: 10px;
+                font-family: Roboto;
+                font-weight: 300;
+                font-size: 11px;
+            }
+            &-stars {
+                position: absolute;
+                bottom: 5px;
+                left: 10px;
             }
         }
     }
