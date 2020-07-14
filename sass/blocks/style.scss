@@ -2,13 +2,8 @@ $main-color: rgba(48, 48, 49, 1);
 $second-color: rgba(166, 135, 102, 1);
 $back-color: rgba(219, 219, 219, 1);
 
-* {
-    font-family: 'Josefin Sans', 'Roboto', sans-serif;
-    
-}
 body {
     margin: 0 auto;
-    width: 100%;
     background-color: $back-color;
 }
 
