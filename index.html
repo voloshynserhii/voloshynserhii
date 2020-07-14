@@ -15,6 +15,10 @@
 <body>
     <div class="header" id="up">
         <div class="cover hide"></div>
+        <div class="thanks hide">
+            <div class="thanks__close">&times;</div>
+            <div class="thanks__text">Thank you for your request!</div> 
+        </div>
         <div class="menu hide">
             <div class="menu__back">
                 <div class="menu__back-hamburger-bar"></div>  
@@ -23,10 +27,10 @@
                 <div class="menu__content-left">
                     <h2>Get in touch with us!</h2>
                     <form id="contact-form" action="#">
-                        <input placeholder="type your name" type="text">
-                        <input placeholder="type your contact phone" type="phone">
-                        <input required placeholder="type required email" type="email">
-                        <input id="text" placeholder="describe here your question" type="text">
+                        <input name="name" placeholder="type your name" type="text">
+                        <input name="phone" placeholder="type your contact phone" type="phone">
+                        <input name="email" required placeholder="type required email" type="email">
+                        <textarea name="text" placeholder="Hello! I want to contact you!" rows="4"></textarea>
                         <button>Contact Me</button>
                     </form>
                 </div>
@@ -202,7 +206,7 @@
             <h2 class="collaboration__head wow animate__animated animate__fadeInDown animate__slow">want to work with us?</h2>
             <div class="wrapper">
                 <div class="collaboration__text wow animate__animated animate__fadeInLeft animate__slow">We are ready to realize your ideas digitally</div>
-                <form action="#" class="order__form wow animate__animated animate__zoomIn animate__slow">
+                <form id="form-email" action="#"class="order__form wow animate__animated animate__zoomIn animate__slow">
                    <input required type="email" class="collaboration__btn" placeholder="email us" name="email"></input>
                 </form>
             </div>
@@ -218,6 +222,7 @@
     <a href="#up" class="pageup">
         <img src="icons/up.svg" alt="arrow up">
     </a>
+
 
 
 

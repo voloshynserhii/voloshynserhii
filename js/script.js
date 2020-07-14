@@ -10,7 +10,9 @@ window.addEventListener('DOMContentLoaded', function() {
         menuBack = document.querySelector('.menu__back'),
         menuCall = document.querySelector('.nav-icon'),
         cover = document.querySelector('.cover'),
-        contactBtn = document.querySelector('.header__navbar-btn');
+        contactBtn = document.querySelector('.header__navbar-btn'),
+        thanks = document.querySelector('.thanks'),
+        thanksClose = document.querySelector('.thanks__close');
         
 
 
@@ -60,6 +62,9 @@ window.addEventListener('DOMContentLoaded', function() {
         menu.classList.add('fadeout', 'hide');
         menu.classList.remove('active', 'fade');
     }
+    function hideThanks() {
+      $('.thanks, .cover').fadeOut('slow');
+  }
 
     back.addEventListener('click', hideTabContent);
     backJ.addEventListener('click', hideContent);
@@ -68,6 +73,7 @@ window.addEventListener('DOMContentLoaded', function() {
     menuCall.addEventListener('click', showMenu);
     menuBack.addEventListener('click', hideMenu);
     contactBtn.addEventListener('click', showMenu);
+    thanksClose.addEventListener('click', hideThanks);
 
 
     $(window).scroll(function() {
@@ -116,19 +122,21 @@ window.addEventListener('DOMContentLoaded', function() {
           });                
       });
 
-      $('form').submit(function(e) {
+      $('#form-email, #contact-form').submit(function(e) {
         e.preventDefault();
         $.ajax({
-          type: "POST",
-          url: "mailer/smart.php",
-          data: $(this).serialize()
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
         }).done(function() {
-          $(this).find("input").val("");
+            $(this).find("input").val("");
+            $('.menu').fadeOut();
+            $('.cover, .thanks').fadeIn('slow');
 
-          $('form').trigger('reset');
+            $('#form-email, #contact-form').trigger('reset');
         });
         return false;
-      });
+    });
 
 //hide scroll button
   $(window).scroll(function() {

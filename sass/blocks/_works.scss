@@ -46,10 +46,115 @@
     }
 }
 .cards {
-    margin-left: 120px;
+    margin-left: 10%;
     background-color: $back-color;
     img {
         width: 450px;
         margin-right: 100px;
+    }
+}
+@media (max-width: 1225px) {
+    .cards {
+        img {
+            width: 45%;
+            margin-right: 30px;
+        }
+    }
+}
+@media (max-width: 860px) {
+    .works {
+        height: 170px;
+        margin-top: 30px;
+        &__head {
+            font-weight: 400;
+            font-size: 38px;
+            line-height: 50px;
+            letter-spacing: 4px;
+        }
+    }
+    .cards {
+        img {
+            width: 40%;
+            margin-right: 20px;
+        }
+    }
+}
+@media (max-width: 860px) {
+    .works {
+        height: 100px;
+        &__head {
+            font-weight: 400;
+            font-size: 38px;
+            line-height: 50px;
+            letter-spacing: 4px;
+        }
+        &__btn {
+            width: 150px;
+            height: 50px;
+            font-size: 12px;
+            line-height: 12px;
+            letter-spacing: 2px;
+            &-txt {
+                margin: 15px 5px 5px 5px;
+            }
+        }
+    }
+    .cards {
+        img {
+            width: 45%;
+            margin-right: 30px;
+        }
+    }
+}
+@media (max-width: 724px) {
+    .works {
+        height: 80px;
+        &__head {
+            font-weight: 400;
+            font-size: 30px;
+            line-height: 32px;
+            letter-spacing: 2px;
+        }
+        &__btn {
+            width: 150px;
+            height: 50px;
+            font-size: 12px;
+            line-height: 12px;
+            letter-spacing: 2px;
+            &-txt {
+                margin: 15px 5px 5px 5px;
+            }
+            img {
+                margin-right: 5px;
+                width: 25%;
+            }
+        }
+    }
+    .cards {
+        img {
+            width: 40%;
+            margin-right: 10px;
+        }
+    }
+}
+@media (max-width: 450px) {
+    .works {
+        height: 60px;
+        &__head {
+            font-weight: 200;
+            font-size: 20px;
+            line-height: 22px;
+            letter-spacing: 2px;
+        }
+        &__btn {
+            width: 20%;
+            height: 30px;
+            font-size: 7px;
+            line-height: 7px;
+            letter-spacing: 0px;
+            &-txt {
+                margin: 10px 5px 5px 5px;
+            }
+        }
     }
 }
