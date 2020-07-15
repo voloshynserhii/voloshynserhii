@@ -1,13 +1,13 @@
 .works {
-    margin: 100px 20px 0 70px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     height: 200px;
-    width: 100%;
     background-color: $back-color;
     &__head {
+        margin: 40px 0 0 100px;
         display: block;
-        width: 50%;
+        width: 45%;
         font-family: Josefin Sans;
         font-weight: 600;
         font-size: 50px;
@@ -17,6 +17,7 @@
         color: $main-color;
     }
     &__btn {
+        margin: 40px 100px 0 0;
         display: flex;
         justify-content: space-between;
         width: 255px;
@@ -54,6 +55,17 @@
     }
 }
 @media (max-width: 1225px) {
+    .works {
+        &__head {
+            font-weight: 500;
+            font-size: 42px;
+            line-height: 80px;
+        }
+        &__btn {
+            width: 220px;
+            height: 80px;
+        }
+    }
     .cards {
         img {
             width: 45%;
@@ -68,7 +80,7 @@
         &__head {
             font-weight: 400;
             font-size: 38px;
-            line-height: 50px;
+            line-height: 42px;
             letter-spacing: 4px;
         }
     }
@@ -84,9 +96,9 @@
         height: 100px;
         &__head {
             font-weight: 400;
-            font-size: 38px;
-            line-height: 50px;
-            letter-spacing: 4px;
+            font-size: 30px;
+            line-height: 38px;
+            letter-spacing: 2px;
         }
         &__btn {
             width: 150px;
